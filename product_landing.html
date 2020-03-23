@@ -1,0 +1,333 @@
+<!Doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Abel|Montserrat|Patua+One&display=swap" rel="stylesheet">
+<style>
+<!--font-family: 'Abel', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Patua One', cursive;-->
+*{
+ padding:0;
+ marrrgin:0;
+}
+body{
+
+}
+.bg-image{
+}
+.bw-gradient
+{
+width:100%;
+height:100%;
+position:absolute;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#959595+0,0d0d0d+46,010101+50,0a0a0a+53,4e4e4e+76,383838+87,1b1b1b+100;Black+Gloss+Pipe */
+background: rgb(149,149,149); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(149,149,149,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(78,78,78,1) 76%, rgba(56,56,56,1) 87%, rgba(27,27,27,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+
+}
+.container{
+width:960px;
+height:700px;
+position:relative;
+margin:0 auto;
+clear:both;
+}
+.header{
+ width:960px;
+ padding:20px;
+}
+nav>ul{
+position:absolute;
+right:150px;
+}
+nav>ul>li{
+ list-style:none;
+ float:left;
+
+}
+nav>ul>li>a{
+ text-decoration: none;
+ font-family: 'Abel', sans-serif;
+ color:#fff;
+ font-size: 14px;
+ font-weight: bold;
+ padding: 0 20px 0 20px;
+}
+.btn
+{
+width:130px;
+height:40px;
+background-color:#34f315;
+font-size: 16px;
+font-family: 'Abel', sans-serif;
+font-weight:bold;
+border:none;
+border-radius:5px;
+color:white;
+position:absolute;
+right:0;
+}
+.logo{
+color:white;
+font-size:30px;
+position:absolute;
+font-family: 'Abel', sans-serif;
+padding:20px;
+}
+
+.brand-quote{
+color:white;
+font-family: 'Patua One', cursive;
+font-size:50px;
+padding-left:20px;
+position:relative;
+top:100px;
+}
+.para{
+ width:500px;
+ font-family: 'Montserrat', sans-serif;
+ color:white;
+ position:relative;
+ top:120px;
+ padding-left:20px;
+ 
+}
+#frm{
+float:right;
+border:none;
+border-radius:10px;
+width:320px;
+height:250px;
+padding-top:20px;
+}
+.info{
+width:200px;
+height:40px;
+color:white;
+position:relative;
+top:160px;
+border-radius:5px;
+font-weight:bold;
+font-size: 16px;
+background-color:#34f315;
+font-family: 'Abel', sans-serif;
+border:none;
+left:20px;
+padding-left:0px;
+cursor: pointer;
+}
+.content {
+  width:700px;
+  height:100px;
+ font-family: 'Montserrat', sans-serif;
+ color:white;
+ position:relative;
+ top:180px;
+ padding-left:20px;
+  display: none;
+  overflow: hidden;
+}
+.sbtn
+{
+ width:100px;
+height:30px;
+background-color:#34f315;
+font-size: 16px;
+font-family: 'Abel', sans-serif;
+font-weight:bold;
+border:none;
+border-radius:5px;
+color:white;
+position:absolute;
+right:0;
+}
+input[type=text] {
+  width: 40%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: grey;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  broder:none;
+  
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 8px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+</style>
+</head> 
+</head>
+<body>
+  <div class="bg-image">
+  <div class="bw-gradient"></div>
+  <div class="container">
+  <div class="logo">webScript</div>
+    <div class="header">
+	  <nav>
+	      <ul>
+		   <li><a href="product_landing.html">home</a></li>
+		   <li><a href="#info">about</a></li>
+		   <li><a href="#frm">video</a></li>
+		   <li><a href="#">jobs</a></li>
+		  </ul>
+	  </nav>
+	  <button class="btn" id="myBtn">Contact</button>
+	  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Contact Information</h2>
+    </div>
+    <div class="modal-body">
+      <p>you can contact us at <strong
+	  >webscript@gmail.com </strong> or contact us on whats app using number <strong>(8130613445)</strong></p>
+    </div>
+  </div>
+
+</div>
+	</div>
+	<h1 class="brand-quote"> Search me on web</h1> 
+	<iframe  id="frm" src="https://www.youtube.com/embed/2817YJInqh0">
+</iframe>
+	<h2 class="brand-quote" style="color:#34f315">WebScripting </h2> 
+	
+	<p class="para">Web scripting is used to create a dynamic web page with interactive content. In client-side scripting, scripts are part of the web page and are executed on the local computer after you have loaded the web page.To know more please watch the video.</p>
+<button type="button" class="info" id="info" >Know about our programs</button>
+ <div class="content">
+  <div class="mail">
+  <p> give us your mail id and we will send you details of our services and courses.</p>
+<form name="form1" > 
+<label for="lfname" >Email:</label> 
+<input type='text' name='text1'>
+<input style="float:right height:20px"  class="sbtn" type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/>
+</form>
+</div>
+</div>
+  </div>
+  </div>
+  <script>
+var coll = document.getElementsByClassName("info");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert("Your mail has been submitted successfully.");
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
+
